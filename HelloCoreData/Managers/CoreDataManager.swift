@@ -7,7 +7,7 @@
 
 import Foundation
 import CoreData
-import Metal
+
 
 class CoreDataManager {
     let persistentContainer: NSPersistentContainer
@@ -21,6 +21,17 @@ class CoreDataManager {
             if let error = error {
                 fatalError("Core Data Store failed to initialize \(error.localizedDescription)")
             }
+        }
+    }
+    
+    func getAllMovies() -> [Movie] {
+        let fetchRequest: NSFetchRequest<Movie> = Movie.fetchRequest()
+        
+        do {
+            // return array of movies from Movie entity
+            return try persistentContainer.viewContext.fetch(fetchRequest)
+        } catch {
+            return []
         }
     }
     
