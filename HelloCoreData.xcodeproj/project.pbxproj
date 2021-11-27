@@ -13,6 +13,7 @@
 		994A9FF1274D7F2000D2BD05 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994A9FF0274D7F2000D2BD05 /* ContentView.swift */; };
 		994A9FF3274D7F2700D2BD05 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 994A9FF2274D7F2700D2BD05 /* Assets.xcassets */; };
 		994A9FF6274D7F2700D2BD05 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 994A9FF5274D7F2700D2BD05 /* Preview Assets.xcassets */; };
+		998A858627527E0D003E2E4E /* MovieDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998A858527527E0D003E2E4E /* MovieDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		994A9FF0274D7F2000D2BD05 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		994A9FF2274D7F2700D2BD05 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		994A9FF5274D7F2700D2BD05 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		998A858527527E0D003E2E4E /* MovieDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				994A9FF2274D7F2700D2BD05 /* Assets.xcassets */,
 				994A9FF4274D7F2700D2BD05 /* Preview Content */,
 				9907D534274EC43A007F8D26 /* HelloCoreDataModel.xcdatamodeld */,
+				998A858527527E0D003E2E4E /* MovieDetailView.swift */,
 			);
 			path = HelloCoreData;
 			sourceTree = "<group>";
@@ -151,6 +154,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				998A858627527E0D003E2E4E /* MovieDetailView.swift in Sources */,
 				994A9FF1274D7F2000D2BD05 /* ContentView.swift in Sources */,
 				994A9FEF274D7F2000D2BD05 /* HelloCoreDataApp.swift in Sources */,
 				9907D53927511D94007F8D26 /* CoreDataManager.swift in Sources */,
