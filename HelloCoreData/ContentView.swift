@@ -11,14 +11,21 @@ struct ContentView: View {
     
     let coreDM: CoreDataManager
     @State private var movieName: String = ""
+    @State private var movies: [Movie] = Array<Movie>()
+    
+    private func populateMovies () {
+        movies = coreDM.getAllMovies()
+    }
     
     var body: some View {
         VStack {
             TextField("Enter movie name", text: $movieName)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
-                .padding()
+                .textInputAutocapitalization(.sentences)
+        
             Button {
                 coreDM.saveMovie(title: movieName)
+                populateMovies()
             } label: {
                 
                 ZStack {
@@ -30,7 +37,25 @@ struct ContentView: View {
                         .background(RoundedRectangle(cornerRadius: 20))
                 }
             }
-
+            
+            List {
+                ForEach (movies, id: \.self) {movie in
+                    Text(movie.title ?? "")
+                }
+                .onDelete { IndexSet in
+                    IndexSet.forEach { index in
+                        let movie = movies[index]
+                        coreDM.deleteMovie(movie: movie)
+                        populateMovies()
+                    }
+                }
+            }
+            
+            
+        }
+        .padding()
+        .onAppear {
+            populateMovies()
         }
     }
 }
