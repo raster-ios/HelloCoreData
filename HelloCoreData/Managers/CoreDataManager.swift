@@ -24,6 +24,14 @@ class CoreDataManager {
         }
     }
     
+    func updateMovie() {
+        do {
+            try persistentContainer.viewContext.save()
+        } catch {
+            persistentContainer.viewContext.rollback()
+        }
+    }
+    
     func deleteMovie(movie: Movie) {
         // mark object (movie) for delete
         persistentContainer.viewContext.delete(movie)
